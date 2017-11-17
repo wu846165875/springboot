@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/bootstrap.min.css}"/>
+    <script th:src="@{/bootstrap/jquery-3.2.1.min.js}" type="javascript"></script>
+    <script th:src="@{/bootstrap/bootstrap.min.js}" type="javascript"></script>
+    <style type="text/css">
+        .signDiv{
+            margin: 150px 400px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="col-md-4 signDiv">
+        <form class="form-signin" action="findUserByNameAndPwd" method="post">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <label for="inputEmail" class="sr-only">Account</label>
+            <input type="text" id="inputEmail" class="form-control" placeholder="Account" required="required" autofocus="autofocus" name="userName"/>
+            <br>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required" name="passWord"/>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+    </div>
+</div> <!-- /container -->
+
+</body>
+</html>
