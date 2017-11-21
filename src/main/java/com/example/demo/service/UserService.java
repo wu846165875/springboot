@@ -24,7 +24,7 @@ public class UserService {
 		System.out.println("查询所有用户------");
 		return userMapper.findAllUser();
 	}
-	@Cacheable(value = "#user.userName")
+	@Cacheable(value = "userCache",key = "#user.userName")
 	public User findUserByNameAndPwd(User user){
 		System.out.println("redis------------");
 		return userMapper.findUserByNameAndPwd(user);

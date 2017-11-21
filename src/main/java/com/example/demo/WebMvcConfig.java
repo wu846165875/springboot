@@ -8,5 +8,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/WebSocket").setViewName("/WebSocket");
+        registry.addViewController("/index").setViewName("/index");
     }
 }

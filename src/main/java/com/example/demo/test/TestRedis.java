@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import redis.clients.jedis.Jedis;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
@@ -17,6 +18,8 @@ public class TestRedis {
     
     @Autowired
     private RedisTemplate redisTemplate;
+
+    private Jedis jedis;
     /**
      * redisTemplate.opsForValue();//操作字符串
      * redisTemplate.opsForHash();//操作hash
@@ -32,5 +35,9 @@ public class TestRedis {
         System.out.println(str);
     }
 
+    @Test
+    public void testB(){
+        redisTemplate.opsForValue().increment("max",1);
+    }
 
 }

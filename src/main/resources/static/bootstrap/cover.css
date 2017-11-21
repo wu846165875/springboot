@@ -95,6 +95,20 @@ body {
     border-bottom-color: #fff;
 }
 
+ .user-setting {
+     margin-left: 900px;
+     border: solid red 1px;
+     width: 40px;
+     height: 40px;
+     border-radius: 100%;
+     text-align: center;
+     overflow: hidden;
+}
+.user-setting>img{
+    margin-top: -75px;
+    margin-left: -1px;
+}
+
 @media (min-width: 768px) {
     .masthead-brand {
         float: left;
